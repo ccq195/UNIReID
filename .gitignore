@@ -1,0 +1,13 @@
+# data/*
+**.pth
+**.pt
+
+**/data/
+
+**/archive/
+
+**.out
+**/__pycache__/
+
+.vscode/
+.pycharm/
