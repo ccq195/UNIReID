@@ -8,3 +8,6 @@
 # Dataset
 Based on existing text-based datasets (CUHK-PEDES, ICFG-PEDES, and RSTPReid), we collect the sketches from photo modality to obtain multi-modality datasets (Tri-CUHK-PEDES, Tri-ICFG-PEDES, and Tri-RSTPReid).  The collected sketches can be found in: https://pan.baidu.com/s/1c0h2utqisEx6OzGuoSaQhA (提取码: ndau). 
 
+#Contact
+chencuiqun@whu.edu.cn; yemang@whu.edu.cn.
+
