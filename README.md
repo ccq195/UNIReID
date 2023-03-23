@@ -12,7 +12,7 @@ Based on existing text-based datasets (CUHK-PEDES, ICFG-PEDES, and RSTPReid), we
 @inproceedings{
 anonymous2023towards,
 title={Towards Modality-Agnostic Person Re-identification with Descriptive Query},
-author={Anonymous},
+author={Cuiqun Chen, Mang Ye, Ding Jiang},
 booktitle={Conference on Computer Vision and Pattern Recognition 2023},
 year={2023}
 }
