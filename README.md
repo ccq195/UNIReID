@@ -8,6 +8,15 @@
 # Dataset
 Based on existing text-based datasets (CUHK-PEDES, ICFG-PEDES, and RSTPReid), we collect the sketches from photo modality to obtain multi-modality datasets (Tri-CUHK-PEDES, Tri-ICFG-PEDES, and Tri-RSTPReid).  The collected sketches can be found in: https://pan.baidu.com/s/1c0h2utqisEx6OzGuoSaQhA (提取码: ndau). 
 
+# Citation
+@inproceedings{
+anonymous2023towards,
+title={Towards Modality-Agnostic Person Re-identification with Descriptive Query},
+author={Anonymous},
+booktitle={Conference on Computer Vision and Pattern Recognition 2023},
+year={2023}
+}
+
 # Contact
 chencuiqun@whu.edu.cn; yemang@whu.edu.cn.
 
