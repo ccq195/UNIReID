@@ -1,0 +1,1008 @@
+/data1/ccq/multimodality-RSTPReid/RSTPReid/20221105_100329_sketch2_add-only-fusion-loss is not exists, create given directory
+2022-11-05 10:03:29,725 CLIP2ReID INFO: Using 1 GPUs
+2022-11-05 10:03:29,725 CLIP2ReID INFO: Namespace(MCM=False
+ MCQ=False
+ MCQMLM=False
+ MLM=False
+ MSM=False
+ MSMMLM=False
+ al=1.0
+ alpha=0.9
+ batch_size=64
+ beta=0.999
+ bias_lr_factor=2.0
+ cmm_loss_weight=1.0
+ cmt_depth=4
+ dataset_name='RSTPReid'
+ distributed=False
+ eval_period=1
+ focal_three_fusion_loss=False
+ focal_three_fusion_loss2=False
+ focal_three_fusion_loss3=False
+ focal_three_fusion_loss4=False
+ focal_three_fusion_loss5=False
+ focal_three_fusion_loss6=False
+ focalthree_four_fusion_loss=False
+ focalthree_fusion_loss=False
+ four_fusion_loss=False
+ fusion_way='add'
+ ga=3.5
+ gamma=0.1
+ id_loss_weight=1.0
+ img_aug=True
+ img_size=(384
+ 128)
+ klp=0.5
+ label_mix=False
+ learnable_loss_weight=False
+ local_rank=0
+ log_period=100
+ loss_names='itc'
+ lr=1e-05
+ lr_factor=5.0
+ lrscheduler='cosine'
+ masked_token_rate=0.8
+ masked_token_unchanged_rate=0.1
+ mcm_loss_weight=1.0
+ mcq_loss_weight=1.0
+ milestones=(20
+ 50)
+ mlm_loss_weight=1.0
+ momentum=0.9
+ name='sketch2_add-only-fusion-loss'
+ nlp_aug=False
+ num_colors=60
+ num_epoch=60
+ num_instance=4
+ num_workers=8
+ only_fusion_loss=True
+ only_sketch=False
+ only_text=False
+ optimizer='Adam'
+ output_dir='/data1/ccq/multimodality-RSTPReid/RSTPReid/20221105_100329_sketch2_add-only-fusion-loss'
+ pa=0.1
+ power=0.9
+ pretrain_choice='ViT-B/16'
+ resume=False
+ resume_ckpt_file=''
+ root_dir='/data0/data_ccq/RSTPReid/'
+ sampler='random'
+ stride_size=16
+ target_lr=0.0
+ temperature=0.07
+ test_batch_size=512
+ test_setting=0
+ text_length=77
+ training=True
+ use_imageid=False
+ val_dataset='test'
+ vocab_size=49408
+ warmup_epochs=5
+ warmup_factor=0.1
+ warmup_method='linear'
+ weight_decay=4e-05
+ weight_decay_bias=0.0)
+2022-11-05 10:03:29,725 CLIP2ReID INFO: Training only sketch False
+2022-11-05 10:03:29,726 CLIP2ReID INFO: Using only text False
+2022-11-05 10:03:29,726 CLIP2ReID INFO: Using only fusion True
+2022-11-05 10:03:29,726 CLIP2ReID INFO: Using add fusion method
+2022-11-05 10:03:29,921 CLIP2ReID.dataset INFO: => RSTPReid Images and Captions are loaded
+2022-11-05 10:03:29,922 CLIP2ReID.dataset INFO: RSTPReid Dataset statistics:
+2022-11-05 10:03:29,922 CLIP2ReID.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 3701 | 18505  |  37010   |
+|  test  | 200  |  1000  |   2000   |
+|  val   | 200  |  1000  |   2000   |
++--------+------+--------+----------+
+2022-11-05 10:03:30,006 CLIP2ReID.dataset INFO: using random sampler
+Training Model with ['itc'] tasks
+2022-11-05 10:03:31,617 CLIP2ReID.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': (384, 128), 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Using 5.0 times learning rate for random init module 
+2022-11-05 10:03:35,210 CLIP2ReID.train INFO: start training
+2022-11-05 10:04:25,576 CLIP2ReID.train INFO: Epoch[1] Iteration[100/579] Loss: 2.3599, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-06
+2022-11-05 10:05:12,480 CLIP2ReID.train INFO: Epoch[1] Iteration[200/579] Loss: 1.7661, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-06
+2022-11-05 10:05:59,354 CLIP2ReID.train INFO: Epoch[1] Iteration[300/579] Loss: 1.4590, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-06
+2022-11-05 10:06:46,504 CLIP2ReID.train INFO: Epoch[1] Iteration[400/579] Loss: 1.2633, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-06
+2022-11-05 10:07:33,604 CLIP2ReID.train INFO: Epoch[1] Iteration[500/579] Loss: 1.1265, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-06
+2022-11-05 10:08:10,907 CLIP2ReID.train INFO: Epoch 1 done. Time per batch: 0.476[s] Speed: 134.4[samples/s]
+2022-11-05 10:08:10,907 CLIP2ReID.train INFO: Validation Results - Epoch: 1
+2022-11-05 10:08:27,863 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 25.099998 |    49.0   | 60.350002 | 19.2114 | 6.7079 |
+|   t2i-sketch_RGB   |    24.8   | 45.100002 |    55.4   | 14.9807 | 2.7474 |
+| t2i-textsketch_RGB |    36.7   |   58.95   |   69.55   | 22.4170 | 5.0339 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 10:09:21,929 CLIP2ReID.train INFO: Epoch[2] Iteration[100/579] Loss: 0.3910, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.80e-06
+2022-11-05 10:10:07,924 CLIP2ReID.train INFO: Epoch[2] Iteration[200/579] Loss: 0.3312, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.80e-06
+2022-11-05 10:10:54,221 CLIP2ReID.train INFO: Epoch[2] Iteration[300/579] Loss: 0.2926, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.80e-06
+2022-11-05 10:11:40,614 CLIP2ReID.train INFO: Epoch[2] Iteration[400/579] Loss: 0.2640, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.80e-06
+2022-11-05 10:12:26,589 CLIP2ReID.train INFO: Epoch[2] Iteration[500/579] Loss: 0.2422, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.80e-06
+2022-11-05 10:13:02,795 CLIP2ReID.train INFO: Epoch 2 done. Time per batch: 0.463[s] Speed: 138.3[samples/s]
+2022-11-05 10:13:02,795 CLIP2ReID.train INFO: Validation Results - Epoch: 2
+2022-11-05 10:13:19,310 CLIP2ReID.eval INFO: 
++--------------------+-----------+-------+-------+---------+--------+
+|        task        |     R1    |   R5  |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-------+-------+---------+--------+
+|    t2i-text_RGB    | 18.099998 | 39.05 |  50.0 | 15.5732 | 6.2641 |
+|   t2i-sketch_RGB   | 31.600002 |  51.5 |  59.2 | 17.5704 | 3.5081 |
+| t2i-textsketch_RGB |    38.0   | 59.95 | 68.55 | 22.3468 | 4.9828 |
++--------------------+-----------+-------+-------+---------+--------+
+2022-11-05 10:14:18,761 CLIP2ReID.train INFO: Epoch[3] Iteration[100/579] Loss: 0.1262, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.60e-06
+2022-11-05 10:15:04,501 CLIP2ReID.train INFO: Epoch[3] Iteration[200/579] Loss: 0.1171, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.60e-06
+2022-11-05 10:15:50,403 CLIP2ReID.train INFO: Epoch[3] Iteration[300/579] Loss: 0.1117, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.60e-06
+2022-11-05 10:16:36,351 CLIP2ReID.train INFO: Epoch[3] Iteration[400/579] Loss: 0.1054, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.60e-06
+2022-11-05 10:17:22,157 CLIP2ReID.train INFO: Epoch[3] Iteration[500/579] Loss: 0.1010, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.60e-06
+2022-11-05 10:17:58,075 CLIP2ReID.train INFO: Epoch 3 done. Time per batch: 0.459[s] Speed: 139.4[samples/s]
+2022-11-05 10:17:58,076 CLIP2ReID.train INFO: Validation Results - Epoch: 3
+2022-11-05 10:18:14,927 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    16.1   |    36.8   |   47.15   | 14.4346 | 6.0851 |
+|   t2i-sketch_RGB   | 31.099998 |    49.7   | 59.600002 | 17.7781 | 3.8161 |
+| t2i-textsketch_RGB |   37.25   | 56.300003 | 66.149994 | 21.5990 | 5.1501 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 10:19:01,778 CLIP2ReID.train INFO: Epoch[4] Iteration[100/579] Loss: 0.0697, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.40e-06
+2022-11-05 10:19:47,523 CLIP2ReID.train INFO: Epoch[4] Iteration[200/579] Loss: 0.0689, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.40e-06
+2022-11-05 10:20:33,306 CLIP2ReID.train INFO: Epoch[4] Iteration[300/579] Loss: 0.0651, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.40e-06
+2022-11-05 10:21:19,065 CLIP2ReID.train INFO: Epoch[4] Iteration[400/579] Loss: 0.0624, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.40e-06
+2022-11-05 10:22:04,831 CLIP2ReID.train INFO: Epoch[4] Iteration[500/579] Loss: 0.0604, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.40e-06
+2022-11-05 10:22:40,790 CLIP2ReID.train INFO: Epoch 4 done. Time per batch: 0.459[s] Speed: 139.5[samples/s]
+2022-11-05 10:22:40,791 CLIP2ReID.train INFO: Validation Results - Epoch: 4
+2022-11-05 10:22:57,311 CLIP2ReID.eval INFO: 
++--------------------+-----------+-------+-------+---------+--------+
+|        task        |     R1    |   R5  |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-------+-------+---------+--------+
+|    t2i-text_RGB    |   13.65   |  32.7 | 44.15 | 12.7530 | 5.4175 |
+|   t2i-sketch_RGB   | 30.899998 |  48.4 |  58.8 | 17.7624 | 4.0473 |
+| t2i-textsketch_RGB |    35.0   | 54.65 |  64.1 | 21.0809 | 5.4105 |
++--------------------+-----------+-------+-------+---------+--------+
+2022-11-05 10:23:43,982 CLIP2ReID.train INFO: Epoch[5] Iteration[100/579] Loss: 0.0472, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.20e-06
+2022-11-05 10:24:29,560 CLIP2ReID.train INFO: Epoch[5] Iteration[200/579] Loss: 0.0446, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.20e-06
+2022-11-05 10:25:15,324 CLIP2ReID.train INFO: Epoch[5] Iteration[300/579] Loss: 0.0439, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.20e-06
+2022-11-05 10:26:01,125 CLIP2ReID.train INFO: Epoch[5] Iteration[400/579] Loss: 0.0422, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.20e-06
+2022-11-05 10:26:46,995 CLIP2ReID.train INFO: Epoch[5] Iteration[500/579] Loss: 0.0409, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.20e-06
+2022-11-05 10:27:23,052 CLIP2ReID.train INFO: Epoch 5 done. Time per batch: 0.459[s] Speed: 139.5[samples/s]
+2022-11-05 10:27:23,052 CLIP2ReID.train INFO: Validation Results - Epoch: 5
+2022-11-05 10:27:39,719 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |   12.75   | 30.199999 |   40.55   | 11.8675 | 4.9854 |
+|   t2i-sketch_RGB   | 31.099998 |    48.8   | 59.600002 | 17.8954 | 4.0335 |
+| t2i-textsketch_RGB |   35.15   |    53.8   | 64.200005 | 20.9012 | 5.1869 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 10:28:26,434 CLIP2ReID.train INFO: Epoch[6] Iteration[100/579] Loss: 0.0321, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-05
+2022-11-05 10:29:12,105 CLIP2ReID.train INFO: Epoch[6] Iteration[200/579] Loss: 0.0321, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-05
+2022-11-05 10:29:57,854 CLIP2ReID.train INFO: Epoch[6] Iteration[300/579] Loss: 0.0320, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-05
+2022-11-05 10:30:43,693 CLIP2ReID.train INFO: Epoch[6] Iteration[400/579] Loss: 0.0315, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-05
+2022-11-05 10:31:29,412 CLIP2ReID.train INFO: Epoch[6] Iteration[500/579] Loss: 0.0310, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.00e-05
+2022-11-05 10:32:05,376 CLIP2ReID.train INFO: Epoch 6 done. Time per batch: 0.459[s] Speed: 139.6[samples/s]
+2022-11-05 10:32:05,376 CLIP2ReID.train INFO: Validation Results - Epoch: 6
+2022-11-05 10:32:21,638 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 11.55 |    29.1   |    40.8   | 11.4179 | 4.8281 |
+|   t2i-sketch_RGB   |  31.3 | 50.300003 | 58.999996 | 18.2427 | 4.5204 |
+| t2i-textsketch_RGB |  35.0 | 54.149998 |    63.5   | 21.1691 | 5.7920 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 10:33:08,606 CLIP2ReID.train INFO: Epoch[7] Iteration[100/579] Loss: 0.0265, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.99e-06
+2022-11-05 10:33:54,561 CLIP2ReID.train INFO: Epoch[7] Iteration[200/579] Loss: 0.0259, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.99e-06
+2022-11-05 10:34:40,737 CLIP2ReID.train INFO: Epoch[7] Iteration[300/579] Loss: 0.0259, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.99e-06
+2022-11-05 10:35:26,874 CLIP2ReID.train INFO: Epoch[7] Iteration[400/579] Loss: 0.0251, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.99e-06
+2022-11-05 10:36:12,941 CLIP2ReID.train INFO: Epoch[7] Iteration[500/579] Loss: 0.0253, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.99e-06
+2022-11-05 10:36:49,048 CLIP2ReID.train INFO: Epoch 7 done. Time per batch: 0.462[s] Speed: 138.7[samples/s]
+2022-11-05 10:36:49,048 CLIP2ReID.train INFO: Validation Results - Epoch: 7
+2022-11-05 10:37:05,134 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |   11.25   | 27.000002 |   38.65   | 11.0463 | 4.7582 |
+|   t2i-sketch_RGB   |    31.3   | 50.700005 | 59.899998 | 18.6170 | 4.8123 |
+| t2i-textsketch_RGB | 35.550003 |    54.5   |    63.7   | 21.4603 | 6.0069 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 10:37:51,929 CLIP2ReID.train INFO: Epoch[8] Iteration[100/579] Loss: 0.0239, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.97e-06
+2022-11-05 10:38:37,330 CLIP2ReID.train INFO: Epoch[8] Iteration[200/579] Loss: 0.0226, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.97e-06
+2022-11-05 10:39:22,783 CLIP2ReID.train INFO: Epoch[8] Iteration[300/579] Loss: 0.0224, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.97e-06
+2022-11-05 10:40:08,300 CLIP2ReID.train INFO: Epoch[8] Iteration[400/579] Loss: 0.0222, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.97e-06
+2022-11-05 10:40:53,961 CLIP2ReID.train INFO: Epoch[8] Iteration[500/579] Loss: 0.0221, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.97e-06
+2022-11-05 10:41:29,964 CLIP2ReID.train INFO: Epoch 8 done. Time per batch: 0.457[s] Speed: 140.0[samples/s]
+2022-11-05 10:41:29,965 CLIP2ReID.train INFO: Validation Results - Epoch: 8
+2022-11-05 10:41:46,346 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  11.4 |   27.25   |    38.5   | 11.1204 | 4.5638 |
+|   t2i-sketch_RGB   |  31.7 | 50.700005 | 60.399998 | 18.6413 | 4.9491 |
+| t2i-textsketch_RGB | 35.95 |    54.6   |   63.75   | 21.4837 | 6.2682 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 10:42:36,929 CLIP2ReID.train INFO: Epoch[9] Iteration[100/579] Loss: 0.0179, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.93e-06
+2022-11-05 10:43:22,496 CLIP2ReID.train INFO: Epoch[9] Iteration[200/579] Loss: 0.0186, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.93e-06
+2022-11-05 10:44:08,059 CLIP2ReID.train INFO: Epoch[9] Iteration[300/579] Loss: 0.0182, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.93e-06
+2022-11-05 10:44:53,677 CLIP2ReID.train INFO: Epoch[9] Iteration[400/579] Loss: 0.0184, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.93e-06
+2022-11-05 10:45:39,458 CLIP2ReID.train INFO: Epoch[9] Iteration[500/579] Loss: 0.0183, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.93e-06
+2022-11-05 10:46:15,336 CLIP2ReID.train INFO: Epoch 9 done. Time per batch: 0.457[s] Speed: 139.9[samples/s]
+2022-11-05 10:46:15,337 CLIP2ReID.train INFO: Validation Results - Epoch: 9
+2022-11-05 10:46:31,495 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 11.200001 |    25.8   |   35.45   | 10.5623 | 4.2910 |
+|   t2i-sketch_RGB   |    31.3   |    49.3   | 59.600002 | 18.4533 | 4.9823 |
+| t2i-textsketch_RGB |   34.65   | 54.100002 | 63.050003 | 21.1287 | 6.2420 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 10:47:18,090 CLIP2ReID.train INFO: Epoch[10] Iteration[100/579] Loss: 0.0190, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.87e-06
+2022-11-05 10:48:03,417 CLIP2ReID.train INFO: Epoch[10] Iteration[200/579] Loss: 0.0191, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.87e-06
+2022-11-05 10:48:48,834 CLIP2ReID.train INFO: Epoch[10] Iteration[300/579] Loss: 0.0190, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.87e-06
+2022-11-05 10:49:34,280 CLIP2ReID.train INFO: Epoch[10] Iteration[400/579] Loss: 0.0183, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.87e-06
+2022-11-05 10:50:19,679 CLIP2ReID.train INFO: Epoch[10] Iteration[500/579] Loss: 0.0179, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.87e-06
+2022-11-05 10:50:55,396 CLIP2ReID.train INFO: Epoch 10 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 10:50:55,396 CLIP2ReID.train INFO: Validation Results - Epoch: 10
+2022-11-05 10:51:11,422 CLIP2ReID.eval INFO: 
++--------------------+------+-------+-----------+---------+--------+
+|        task        |  R1  |   R5  |    R10    |   mAP   |  mINP  |
++--------------------+------+-------+-----------+---------+--------+
+|    t2i-text_RGB    | 10.7 |  26.1 |    36.5   | 10.8345 | 4.6866 |
+|   t2i-sketch_RGB   | 32.2 |  51.2 | 61.199997 | 19.1780 | 5.1944 |
+| t2i-textsketch_RGB | 35.5 | 54.45 |   64.65   | 21.8155 | 6.5274 |
++--------------------+------+-------+-----------+---------+--------+
+2022-11-05 10:52:02,170 CLIP2ReID.train INFO: Epoch[11] Iteration[100/579] Loss: 0.0166, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.80e-06
+2022-11-05 10:52:47,637 CLIP2ReID.train INFO: Epoch[11] Iteration[200/579] Loss: 0.0161, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.80e-06
+2022-11-05 10:53:33,025 CLIP2ReID.train INFO: Epoch[11] Iteration[300/579] Loss: 0.0166, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.80e-06
+2022-11-05 10:54:18,431 CLIP2ReID.train INFO: Epoch[11] Iteration[400/579] Loss: 0.0168, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.80e-06
+2022-11-05 10:55:03,821 CLIP2ReID.train INFO: Epoch[11] Iteration[500/579] Loss: 0.0170, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.80e-06
+2022-11-05 10:55:39,422 CLIP2ReID.train INFO: Epoch 11 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 10:55:39,423 CLIP2ReID.train INFO: Validation Results - Epoch: 11
+2022-11-05 10:55:55,517 CLIP2ReID.eval INFO: 
++--------------------+----------+-----------+-----------+---------+--------+
+|        task        |    R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 9.700001 | 25.150002 |   36.35   | 10.3975 | 4.5242 |
+|   t2i-sketch_RGB   |   30.8   |    50.6   | 61.799995 | 19.0051 | 5.2073 |
+| t2i-textsketch_RGB |   35.0   |    55.5   |   64.55   | 21.8117 | 6.5209 |
++--------------------+----------+-----------+-----------+---------+--------+
+2022-11-05 10:56:41,826 CLIP2ReID.train INFO: Epoch[12] Iteration[100/579] Loss: 0.0163, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.71e-06
+2022-11-05 10:57:27,088 CLIP2ReID.train INFO: Epoch[12] Iteration[200/579] Loss: 0.0162, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.71e-06
+2022-11-05 10:58:12,500 CLIP2ReID.train INFO: Epoch[12] Iteration[300/579] Loss: 0.0156, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.71e-06
+2022-11-05 10:58:57,924 CLIP2ReID.train INFO: Epoch[12] Iteration[400/579] Loss: 0.0156, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.71e-06
+2022-11-05 10:59:43,342 CLIP2ReID.train INFO: Epoch[12] Iteration[500/579] Loss: 0.0156, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.71e-06
+2022-11-05 11:00:18,906 CLIP2ReID.train INFO: Epoch 12 done. Time per batch: 0.455[s] Speed: 140.8[samples/s]
+2022-11-05 11:00:18,906 CLIP2ReID.train INFO: Validation Results - Epoch: 12
+2022-11-05 11:00:35,009 CLIP2ReID.eval INFO: 
++--------------------+-----------+-------+-----------+---------+--------+
+|        task        |     R1    |   R5  |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.849999 | 24.55 |   34.25   | 10.0199 | 4.3406 |
+|   t2i-sketch_RGB   | 30.300001 |  50.1 |    60.2   | 18.5250 | 5.0570 |
+| t2i-textsketch_RGB |    35.0   |  54.7 | 63.300003 | 21.2750 | 6.2837 |
++--------------------+-----------+-------+-----------+---------+--------+
+2022-11-05 11:01:21,541 CLIP2ReID.train INFO: Epoch[13] Iteration[100/579] Loss: 0.0137, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.61e-06
+2022-11-05 11:02:06,863 CLIP2ReID.train INFO: Epoch[13] Iteration[200/579] Loss: 0.0136, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.61e-06
+2022-11-05 11:02:52,267 CLIP2ReID.train INFO: Epoch[13] Iteration[300/579] Loss: 0.0134, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.61e-06
+2022-11-05 11:03:37,681 CLIP2ReID.train INFO: Epoch[13] Iteration[400/579] Loss: 0.0134, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.61e-06
+2022-11-05 11:04:23,149 CLIP2ReID.train INFO: Epoch[13] Iteration[500/579] Loss: 0.0137, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.61e-06
+2022-11-05 11:04:58,789 CLIP2ReID.train INFO: Epoch 13 done. Time per batch: 0.455[s] Speed: 140.6[samples/s]
+2022-11-05 11:04:58,789 CLIP2ReID.train INFO: Validation Results - Epoch: 13
+2022-11-05 11:05:14,957 CLIP2ReID.eval INFO: 
++--------------------+-----------+------+-----------+---------+--------+
+|        task        |     R1    |  R5  |    R10    |   mAP   |  mINP  |
++--------------------+-----------+------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.849999 | 23.4 |   33.85   |  9.9526 | 4.3154 |
+|   t2i-sketch_RGB   | 29.699999 | 49.1 |    58.7   | 18.0589 | 4.8927 |
+| t2i-textsketch_RGB | 33.399998 | 53.3 | 62.699997 | 20.5895 | 6.1935 |
++--------------------+-----------+------+-----------+---------+--------+
+2022-11-05 11:06:01,482 CLIP2ReID.train INFO: Epoch[14] Iteration[100/579] Loss: 0.0141, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.49e-06
+2022-11-05 11:06:46,883 CLIP2ReID.train INFO: Epoch[14] Iteration[200/579] Loss: 0.0141, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.49e-06
+2022-11-05 11:07:32,378 CLIP2ReID.train INFO: Epoch[14] Iteration[300/579] Loss: 0.0142, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.49e-06
+2022-11-05 11:08:17,825 CLIP2ReID.train INFO: Epoch[14] Iteration[400/579] Loss: 0.0142, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.49e-06
+2022-11-05 11:09:03,266 CLIP2ReID.train INFO: Epoch[14] Iteration[500/579] Loss: 0.0140, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.49e-06
+2022-11-05 11:09:38,922 CLIP2ReID.train INFO: Epoch 14 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 11:09:38,922 CLIP2ReID.train INFO: Validation Results - Epoch: 14
+2022-11-05 11:09:55,134 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    10.5   |   24.55   |    34.3   | 10.1417 | 4.4206 |
+|   t2i-sketch_RGB   | 29.699999 |    48.8   | 59.500004 | 18.0944 | 4.7885 |
+| t2i-textsketch_RGB |    33.7   | 53.750004 |   63.25   | 20.7552 | 6.0598 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 11:10:41,509 CLIP2ReID.train INFO: Epoch[15] Iteration[100/579] Loss: 0.0123, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.35e-06
+2022-11-05 11:11:26,771 CLIP2ReID.train INFO: Epoch[15] Iteration[200/579] Loss: 0.0125, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.35e-06
+2022-11-05 11:12:12,086 CLIP2ReID.train INFO: Epoch[15] Iteration[300/579] Loss: 0.0125, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.35e-06
+2022-11-05 11:12:57,453 CLIP2ReID.train INFO: Epoch[15] Iteration[400/579] Loss: 0.0124, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.35e-06
+2022-11-05 11:13:42,934 CLIP2ReID.train INFO: Epoch[15] Iteration[500/579] Loss: 0.0124, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.35e-06
+2022-11-05 11:14:18,615 CLIP2ReID.train INFO: Epoch 15 done. Time per batch: 0.455[s] Speed: 140.7[samples/s]
+2022-11-05 11:14:18,615 CLIP2ReID.train INFO: Validation Results - Epoch: 15
+2022-11-05 11:14:34,939 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |   10.15   | 24.349998 |    34.0   | 10.3757 | 4.5541 |
+|   t2i-sketch_RGB   |    29.4   |    50.0   | 60.100002 | 18.5124 | 4.9151 |
+| t2i-textsketch_RGB | 33.899998 | 54.350002 | 64.200005 | 21.2193 | 6.2793 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 11:15:21,468 CLIP2ReID.train INFO: Epoch[16] Iteration[100/579] Loss: 0.0118, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.21e-06
+2022-11-05 11:16:06,856 CLIP2ReID.train INFO: Epoch[16] Iteration[200/579] Loss: 0.0118, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.21e-06
+2022-11-05 11:16:52,373 CLIP2ReID.train INFO: Epoch[16] Iteration[300/579] Loss: 0.0117, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.21e-06
+2022-11-05 11:17:37,937 CLIP2ReID.train INFO: Epoch[16] Iteration[400/579] Loss: 0.0119, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.21e-06
+2022-11-05 11:18:23,565 CLIP2ReID.train INFO: Epoch[16] Iteration[500/579] Loss: 0.0119, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.21e-06
+2022-11-05 11:18:59,291 CLIP2ReID.train INFO: Epoch 16 done. Time per batch: 0.456[s] Speed: 140.3[samples/s]
+2022-11-05 11:18:59,291 CLIP2ReID.train INFO: Validation Results - Epoch: 16
+2022-11-05 11:19:15,595 CLIP2ReID.eval INFO: 
++--------------------+-------+------+-------+---------+--------+
+|        task        |   R1  |  R5  |  R10  |   mAP   |  mINP  |
++--------------------+-------+------+-------+---------+--------+
+|    t2i-text_RGB    | 10.75 | 25.8 | 35.15 | 10.5024 | 4.5598 |
+|   t2i-sketch_RGB   |  30.1 | 50.0 |  59.7 | 18.5796 | 5.0060 |
+| t2i-textsketch_RGB |  34.1 | 53.8 |  64.0 | 21.1677 | 6.2698 |
++--------------------+-------+------+-------+---------+--------+
+2022-11-05 11:20:03,154 CLIP2ReID.train INFO: Epoch[17] Iteration[100/579] Loss: 0.0109, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.05e-06
+2022-11-05 11:20:48,771 CLIP2ReID.train INFO: Epoch[17] Iteration[200/579] Loss: 0.0115, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.05e-06
+2022-11-05 11:21:34,479 CLIP2ReID.train INFO: Epoch[17] Iteration[300/579] Loss: 0.0113, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.05e-06
+2022-11-05 11:22:20,291 CLIP2ReID.train INFO: Epoch[17] Iteration[400/579] Loss: 0.0112, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.05e-06
+2022-11-05 11:23:06,160 CLIP2ReID.train INFO: Epoch[17] Iteration[500/579] Loss: 0.0112, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.05e-06
+2022-11-05 11:23:41,956 CLIP2ReID.train INFO: Epoch 17 done. Time per batch: 0.460[s] Speed: 139.2[samples/s]
+2022-11-05 11:23:41,956 CLIP2ReID.train INFO: Validation Results - Epoch: 17
+2022-11-05 11:23:58,114 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-------+---------+--------+
+|        task        |   R1  |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |  8.8  | 24.050001 | 33.75 |  9.6428 | 4.2485 |
+|   t2i-sketch_RGB   |  28.7 |    49.7   |  60.3 | 18.4651 | 5.0454 |
+| t2i-textsketch_RGB | 33.35 |   54.05   | 63.15 | 21.1546 | 6.3394 |
++--------------------+-------+-----------+-------+---------+--------+
+2022-11-05 11:24:44,850 CLIP2ReID.train INFO: Epoch[18] Iteration[100/579] Loss: 0.0116, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.87e-06
+2022-11-05 11:25:30,300 CLIP2ReID.train INFO: Epoch[18] Iteration[200/579] Loss: 0.0111, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.87e-06
+2022-11-05 11:26:15,755 CLIP2ReID.train INFO: Epoch[18] Iteration[300/579] Loss: 0.0107, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.87e-06
+2022-11-05 11:27:01,118 CLIP2ReID.train INFO: Epoch[18] Iteration[400/579] Loss: 0.0109, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.87e-06
+2022-11-05 11:27:46,527 CLIP2ReID.train INFO: Epoch[18] Iteration[500/579] Loss: 0.0108, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.87e-06
+2022-11-05 11:28:22,153 CLIP2ReID.train INFO: Epoch 18 done. Time per batch: 0.456[s] Speed: 140.4[samples/s]
+2022-11-05 11:28:22,153 CLIP2ReID.train INFO: Validation Results - Epoch: 18
+2022-11-05 11:28:38,222 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.5  |    25.0   |   33.35   |  9.8733 | 4.4629 |
+|   t2i-sketch_RGB   |  28.8 |    49.6   | 60.600002 | 18.4734 | 5.0983 |
+| t2i-textsketch_RGB | 33.35 | 54.000004 |    63.1   | 21.0650 | 6.2857 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 11:29:24,725 CLIP2ReID.train INFO: Epoch[19] Iteration[100/579] Loss: 0.0108, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.68e-06
+2022-11-05 11:30:10,095 CLIP2ReID.train INFO: Epoch[19] Iteration[200/579] Loss: 0.0108, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.68e-06
+2022-11-05 11:30:55,583 CLIP2ReID.train INFO: Epoch[19] Iteration[300/579] Loss: 0.0109, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.68e-06
+2022-11-05 11:31:41,111 CLIP2ReID.train INFO: Epoch[19] Iteration[400/579] Loss: 0.0109, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.68e-06
+2022-11-05 11:32:26,699 CLIP2ReID.train INFO: Epoch[19] Iteration[500/579] Loss: 0.0106, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.68e-06
+2022-11-05 11:33:02,526 CLIP2ReID.train INFO: Epoch 19 done. Time per batch: 0.456[s] Speed: 140.3[samples/s]
+2022-11-05 11:33:02,527 CLIP2ReID.train INFO: Validation Results - Epoch: 19
+2022-11-05 11:33:19,426 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.3    |   24.75   |   33.95   |  9.8791 | 4.3495 |
+|   t2i-sketch_RGB   | 28.400002 |    48.8   |    58.7   | 17.8937 | 4.8914 |
+| t2i-textsketch_RGB |   32.25   | 53.149998 | 62.550003 | 20.4403 | 6.1538 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 11:34:06,259 CLIP2ReID.train INFO: Epoch[20] Iteration[100/579] Loss: 0.0108, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.48e-06
+2022-11-05 11:34:51,920 CLIP2ReID.train INFO: Epoch[20] Iteration[200/579] Loss: 0.0110, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.48e-06
+2022-11-05 11:35:37,749 CLIP2ReID.train INFO: Epoch[20] Iteration[300/579] Loss: 0.0108, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.48e-06
+2022-11-05 11:36:23,490 CLIP2ReID.train INFO: Epoch[20] Iteration[400/579] Loss: 0.0103, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.48e-06
+2022-11-05 11:37:09,252 CLIP2ReID.train INFO: Epoch[20] Iteration[500/579] Loss: 0.0101, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.48e-06
+2022-11-05 11:37:45,210 CLIP2ReID.train INFO: Epoch 20 done. Time per batch: 0.459[s] Speed: 139.5[samples/s]
+2022-11-05 11:37:45,210 CLIP2ReID.train INFO: Validation Results - Epoch: 20
+2022-11-05 11:38:01,933 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.2    |   25.05   |    34.0   |  9.9769 | 4.5269 |
+|   t2i-sketch_RGB   | 28.400002 |    49.3   | 59.100002 | 18.1510 | 4.9377 |
+| t2i-textsketch_RGB |    32.2   | 53.649998 |    62.6   | 20.6640 | 6.1554 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 11:38:48,820 CLIP2ReID.train INFO: Epoch[21] Iteration[100/579] Loss: 0.0089, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.27e-06
+2022-11-05 11:39:34,621 CLIP2ReID.train INFO: Epoch[21] Iteration[200/579] Loss: 0.0095, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.27e-06
+2022-11-05 11:40:20,547 CLIP2ReID.train INFO: Epoch[21] Iteration[300/579] Loss: 0.0100, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.27e-06
+2022-11-05 11:41:06,393 CLIP2ReID.train INFO: Epoch[21] Iteration[400/579] Loss: 0.0096, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.27e-06
+2022-11-05 11:41:52,212 CLIP2ReID.train INFO: Epoch[21] Iteration[500/579] Loss: 0.0095, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.27e-06
+2022-11-05 11:42:28,269 CLIP2ReID.train INFO: Epoch 21 done. Time per batch: 0.460[s] Speed: 139.2[samples/s]
+2022-11-05 11:42:28,269 CLIP2ReID.train INFO: Validation Results - Epoch: 21
+2022-11-05 11:42:45,410 CLIP2ReID.eval INFO: 
++--------------------+------+-----------+-----------+---------+--------+
+|        task        |  R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 9.9  | 25.650002 | 35.350002 | 10.3957 | 4.5387 |
+|   t2i-sketch_RGB   | 27.3 |    47.8   |    57.7   | 16.9098 | 4.4027 |
+| t2i-textsketch_RGB | 30.7 | 52.100002 | 61.549995 | 19.2924 | 5.6253 |
++--------------------+------+-----------+-----------+---------+--------+
+2022-11-05 11:43:32,222 CLIP2ReID.train INFO: Epoch[22] Iteration[100/579] Loss: 0.0097, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.05e-06
+2022-11-05 11:44:17,863 CLIP2ReID.train INFO: Epoch[22] Iteration[200/579] Loss: 0.0103, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.05e-06
+2022-11-05 11:45:03,631 CLIP2ReID.train INFO: Epoch[22] Iteration[300/579] Loss: 0.0101, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.05e-06
+2022-11-05 11:45:49,444 CLIP2ReID.train INFO: Epoch[22] Iteration[400/579] Loss: 0.0100, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.05e-06
+2022-11-05 11:46:35,314 CLIP2ReID.train INFO: Epoch[22] Iteration[500/579] Loss: 0.0099, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.05e-06
+2022-11-05 11:47:11,355 CLIP2ReID.train INFO: Epoch 22 done. Time per batch: 0.459[s] Speed: 139.4[samples/s]
+2022-11-05 11:47:11,356 CLIP2ReID.train INFO: Validation Results - Epoch: 22
+2022-11-05 11:47:28,116 CLIP2ReID.eval INFO: 
++--------------------+----------+-----------+-----------+---------+--------+
+|        task        |    R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 9.700001 | 26.800001 |   34.45   | 10.3316 | 4.4200 |
+|   t2i-sketch_RGB   |   28.0   |    48.8   | 58.600002 | 17.7509 | 4.7377 |
+| t2i-textsketch_RGB |  32.05   |    53.2   | 62.449997 | 20.3353 | 6.0999 |
++--------------------+----------+-----------+-----------+---------+--------+
+2022-11-05 11:48:15,094 CLIP2ReID.train INFO: Epoch[23] Iteration[100/579] Loss: 0.0092, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.82e-06
+2022-11-05 11:49:00,783 CLIP2ReID.train INFO: Epoch[23] Iteration[200/579] Loss: 0.0092, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.82e-06
+2022-11-05 11:49:46,623 CLIP2ReID.train INFO: Epoch[23] Iteration[300/579] Loss: 0.0093, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.82e-06
+2022-11-05 11:50:32,454 CLIP2ReID.train INFO: Epoch[23] Iteration[400/579] Loss: 0.0096, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.82e-06
+2022-11-05 11:51:18,245 CLIP2ReID.train INFO: Epoch[23] Iteration[500/579] Loss: 0.0094, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.82e-06
+2022-11-05 11:51:54,272 CLIP2ReID.train INFO: Epoch 23 done. Time per batch: 0.459[s] Speed: 139.3[samples/s]
+2022-11-05 11:51:54,273 CLIP2ReID.train INFO: Validation Results - Epoch: 23
+2022-11-05 11:52:10,979 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |   10.65   | 26.550001 |   35.65   | 10.5228 | 4.6043 |
+|   t2i-sketch_RGB   | 28.400002 |    48.4   | 59.399998 | 17.9375 | 4.8735 |
+| t2i-textsketch_RGB | 31.900002 | 52.999996 | 63.300003 | 20.3694 | 6.1602 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 11:52:57,599 CLIP2ReID.train INFO: Epoch[24] Iteration[100/579] Loss: 0.0080, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.58e-06
+2022-11-05 11:53:43,340 CLIP2ReID.train INFO: Epoch[24] Iteration[200/579] Loss: 0.0082, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.58e-06
+2022-11-05 11:54:29,154 CLIP2ReID.train INFO: Epoch[24] Iteration[300/579] Loss: 0.0085, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.58e-06
+2022-11-05 11:55:15,002 CLIP2ReID.train INFO: Epoch[24] Iteration[400/579] Loss: 0.0088, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.58e-06
+2022-11-05 11:56:00,964 CLIP2ReID.train INFO: Epoch[24] Iteration[500/579] Loss: 0.0088, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.58e-06
+2022-11-05 11:56:37,126 CLIP2ReID.train INFO: Epoch 24 done. Time per batch: 0.459[s] Speed: 139.3[samples/s]
+2022-11-05 11:56:37,126 CLIP2ReID.train INFO: Validation Results - Epoch: 24
+2022-11-05 11:56:53,968 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.0  | 24.699999 |   33.85   |  9.7881 | 4.3495 |
+|   t2i-sketch_RGB   |  27.8 | 48.699997 | 59.399998 | 17.7843 | 4.8341 |
+| t2i-textsketch_RGB | 31.45 | 53.350002 | 61.799995 | 20.3038 | 6.1720 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 11:57:40,964 CLIP2ReID.train INFO: Epoch[25] Iteration[100/579] Loss: 0.0089, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.33e-06
+2022-11-05 11:58:26,759 CLIP2ReID.train INFO: Epoch[25] Iteration[200/579] Loss: 0.0091, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.33e-06
+2022-11-05 11:59:12,718 CLIP2ReID.train INFO: Epoch[25] Iteration[300/579] Loss: 0.0093, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.33e-06
+2022-11-05 11:59:58,816 CLIP2ReID.train INFO: Epoch[25] Iteration[400/579] Loss: 0.0093, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.33e-06
+2022-11-05 12:00:44,986 CLIP2ReID.train INFO: Epoch[25] Iteration[500/579] Loss: 0.0090, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.33e-06
+2022-11-05 12:01:21,187 CLIP2ReID.train INFO: Epoch 25 done. Time per batch: 0.461[s] Speed: 138.8[samples/s]
+2022-11-05 12:01:21,187 CLIP2ReID.train INFO: Validation Results - Epoch: 25
+2022-11-05 12:01:38,541 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  8.900001 | 25.400002 |   33.95   |  9.8341 | 4.4011 |
+|   t2i-sketch_RGB   | 28.600002 |    48.2   |    58.1   | 17.8138 | 4.8306 |
+| t2i-textsketch_RGB | 31.650002 | 52.899998 | 61.699997 | 20.1965 | 5.9969 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 12:02:25,380 CLIP2ReID.train INFO: Epoch[26] Iteration[100/579] Loss: 0.0087, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.08e-06
+2022-11-05 12:03:11,196 CLIP2ReID.train INFO: Epoch[26] Iteration[200/579] Loss: 0.0085, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.08e-06
+2022-11-05 12:03:57,068 CLIP2ReID.train INFO: Epoch[26] Iteration[300/579] Loss: 0.0085, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.08e-06
+2022-11-05 12:04:43,023 CLIP2ReID.train INFO: Epoch[26] Iteration[400/579] Loss: 0.0082, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.08e-06
+2022-11-05 12:05:28,961 CLIP2ReID.train INFO: Epoch[26] Iteration[500/579] Loss: 0.0083, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.08e-06
+2022-11-05 12:06:04,998 CLIP2ReID.train INFO: Epoch 26 done. Time per batch: 0.460[s] Speed: 139.1[samples/s]
+2022-11-05 12:06:04,998 CLIP2ReID.train INFO: Validation Results - Epoch: 26
+2022-11-05 12:06:21,689 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+------+---------+--------+
+|        task        |     R1    |     R5    | R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+------+---------+--------+
+|    t2i-text_RGB    |    9.6    |   25.55   | 34.5 |  9.9917 | 4.6333 |
+|   t2i-sketch_RGB   | 28.400002 | 49.399998 | 59.3 | 18.0092 | 4.9299 |
+| t2i-textsketch_RGB |    31.5   | 53.600002 | 62.5 | 20.4811 | 6.2746 |
++--------------------+-----------+-----------+------+---------+--------+
+2022-11-05 12:07:08,630 CLIP2ReID.train INFO: Epoch[27] Iteration[100/579] Loss: 0.0082, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.81e-06
+2022-11-05 12:07:54,250 CLIP2ReID.train INFO: Epoch[27] Iteration[200/579] Loss: 0.0081, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.81e-06
+2022-11-05 12:08:39,977 CLIP2ReID.train INFO: Epoch[27] Iteration[300/579] Loss: 0.0079, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.81e-06
+2022-11-05 12:09:25,719 CLIP2ReID.train INFO: Epoch[27] Iteration[400/579] Loss: 0.0082, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.81e-06
+2022-11-05 12:10:11,604 CLIP2ReID.train INFO: Epoch[27] Iteration[500/579] Loss: 0.0085, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.81e-06
+2022-11-05 12:10:47,563 CLIP2ReID.train INFO: Epoch 27 done. Time per batch: 0.459[s] Speed: 139.5[samples/s]
+2022-11-05 12:10:47,563 CLIP2ReID.train INFO: Validation Results - Epoch: 27
+2022-11-05 12:11:04,341 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  8.65 |    26.0   |    34.9   |  9.9928 | 4.5495 |
+|   t2i-sketch_RGB   |  27.2 |    50.5   | 59.899998 | 18.1391 | 5.1690 |
+| t2i-textsketch_RGB | 32.25 | 54.100002 | 63.050003 | 20.8781 | 6.5499 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 12:11:51,169 CLIP2ReID.train INFO: Epoch[28] Iteration[100/579] Loss: 0.0087, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.55e-06
+2022-11-05 12:12:37,063 CLIP2ReID.train INFO: Epoch[28] Iteration[200/579] Loss: 0.0083, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.55e-06
+2022-11-05 12:13:22,857 CLIP2ReID.train INFO: Epoch[28] Iteration[300/579] Loss: 0.0082, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.55e-06
+2022-11-05 12:14:08,728 CLIP2ReID.train INFO: Epoch[28] Iteration[400/579] Loss: 0.0079, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.55e-06
+2022-11-05 12:14:54,552 CLIP2ReID.train INFO: Epoch[28] Iteration[500/579] Loss: 0.0078, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.55e-06
+2022-11-05 12:15:30,579 CLIP2ReID.train INFO: Epoch 28 done. Time per batch: 0.460[s] Speed: 139.3[samples/s]
+2022-11-05 12:15:30,579 CLIP2ReID.train INFO: Validation Results - Epoch: 28
+2022-11-05 12:15:47,195 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.45   | 25.150002 |   34.75   |  9.8885 | 4.4677 |
+|   t2i-sketch_RGB   |    27.2   |    48.6   | 57.300003 | 17.5621 | 4.9037 |
+| t2i-textsketch_RGB | 30.899998 | 52.999996 |   61.85   | 20.1898 | 6.1907 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 12:16:33,928 CLIP2ReID.train INFO: Epoch[29] Iteration[100/579] Loss: 0.0080, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.27e-06
+2022-11-05 12:17:19,598 CLIP2ReID.train INFO: Epoch[29] Iteration[200/579] Loss: 0.0075, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.27e-06
+2022-11-05 12:18:05,238 CLIP2ReID.train INFO: Epoch[29] Iteration[300/579] Loss: 0.0072, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.27e-06
+2022-11-05 12:18:51,141 CLIP2ReID.train INFO: Epoch[29] Iteration[400/579] Loss: 0.0077, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.27e-06
+2022-11-05 12:19:37,096 CLIP2ReID.train INFO: Epoch[29] Iteration[500/579] Loss: 0.0080, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.27e-06
+2022-11-05 12:20:13,155 CLIP2ReID.train INFO: Epoch 29 done. Time per batch: 0.459[s] Speed: 139.4[samples/s]
+2022-11-05 12:20:13,156 CLIP2ReID.train INFO: Validation Results - Epoch: 29
+2022-11-05 12:20:29,960 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.35 | 25.949999 |   34.55   |  9.8995 | 4.3655 |
+|   t2i-sketch_RGB   |  27.7 |    49.2   | 59.100002 | 17.8567 | 4.9069 |
+| t2i-textsketch_RGB | 31.95 | 53.350002 | 62.199997 | 20.4642 | 6.2205 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 12:21:16,720 CLIP2ReID.train INFO: Epoch[30] Iteration[100/579] Loss: 0.0087, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.99e-06
+2022-11-05 12:22:02,401 CLIP2ReID.train INFO: Epoch[30] Iteration[200/579] Loss: 0.0088, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.99e-06
+2022-11-05 12:22:48,082 CLIP2ReID.train INFO: Epoch[30] Iteration[300/579] Loss: 0.0084, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.99e-06
+2022-11-05 12:23:33,776 CLIP2ReID.train INFO: Epoch[30] Iteration[400/579] Loss: 0.0080, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.99e-06
+2022-11-05 12:24:19,494 CLIP2ReID.train INFO: Epoch[30] Iteration[500/579] Loss: 0.0079, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.99e-06
+2022-11-05 12:24:55,346 CLIP2ReID.train INFO: Epoch 30 done. Time per batch: 0.458[s] Speed: 139.7[samples/s]
+2022-11-05 12:24:55,346 CLIP2ReID.train INFO: Validation Results - Epoch: 30
+2022-11-05 12:25:12,252 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.25   |    25.8   |    35.7   |  9.9136 | 4.4745 |
+|   t2i-sketch_RGB   | 27.000002 | 48.899998 | 59.399998 | 17.8246 | 5.0238 |
+| t2i-textsketch_RGB |    31.5   |   53.45   | 62.199997 | 20.4445 | 6.3725 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 12:25:59,134 CLIP2ReID.train INFO: Epoch[31] Iteration[100/579] Loss: 0.0078, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.71e-06
+2022-11-05 12:26:44,949 CLIP2ReID.train INFO: Epoch[31] Iteration[200/579] Loss: 0.0071, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.71e-06
+2022-11-05 12:27:30,885 CLIP2ReID.train INFO: Epoch[31] Iteration[300/579] Loss: 0.0073, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.71e-06
+2022-11-05 12:28:16,974 CLIP2ReID.train INFO: Epoch[31] Iteration[400/579] Loss: 0.0076, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.71e-06
+2022-11-05 12:29:03,135 CLIP2ReID.train INFO: Epoch[31] Iteration[500/579] Loss: 0.0077, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.71e-06
+2022-11-05 12:29:39,305 CLIP2ReID.train INFO: Epoch 31 done. Time per batch: 0.461[s] Speed: 138.8[samples/s]
+2022-11-05 12:29:39,305 CLIP2ReID.train INFO: Validation Results - Epoch: 31
+2022-11-05 12:29:55,848 CLIP2ReID.eval INFO: 
++--------------------+-----------+-------+-----------+---------+--------+
+|        task        |     R1    |   R5  |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.9    |  27.2 |    36.7   | 10.3431 | 4.5993 |
+|   t2i-sketch_RGB   |    28.2   |  49.5 | 58.899998 | 18.0022 | 4.9840 |
+| t2i-textsketch_RGB | 32.600002 | 54.55 |   62.15   | 20.7561 | 6.3382 |
++--------------------+-----------+-------+-----------+---------+--------+
+2022-11-05 12:30:42,511 CLIP2ReID.train INFO: Epoch[32] Iteration[100/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.43e-06
+2022-11-05 12:31:28,072 CLIP2ReID.train INFO: Epoch[32] Iteration[200/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.43e-06
+2022-11-05 12:32:13,651 CLIP2ReID.train INFO: Epoch[32] Iteration[300/579] Loss: 0.0074, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.43e-06
+2022-11-05 12:32:59,204 CLIP2ReID.train INFO: Epoch[32] Iteration[400/579] Loss: 0.0073, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.43e-06
+2022-11-05 12:33:44,796 CLIP2ReID.train INFO: Epoch[32] Iteration[500/579] Loss: 0.0074, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.43e-06
+2022-11-05 12:34:20,685 CLIP2ReID.train INFO: Epoch 32 done. Time per batch: 0.457[s] Speed: 140.0[samples/s]
+2022-11-05 12:34:20,685 CLIP2ReID.train INFO: Validation Results - Epoch: 32
+2022-11-05 12:34:37,311 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.15   |    25.6   |   35.75   | 10.0075 | 4.4406 |
+|   t2i-sketch_RGB   |    28.0   |    49.5   |    58.8   | 17.7508 | 4.7639 |
+| t2i-textsketch_RGB | 30.849998 | 53.250004 | 62.199997 | 20.2426 | 6.1090 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 12:35:24,236 CLIP2ReID.train INFO: Epoch[33] Iteration[100/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.14e-06
+2022-11-05 12:36:10,011 CLIP2ReID.train INFO: Epoch[33] Iteration[200/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.14e-06
+2022-11-05 12:36:55,962 CLIP2ReID.train INFO: Epoch[33] Iteration[300/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.14e-06
+2022-11-05 12:37:41,805 CLIP2ReID.train INFO: Epoch[33] Iteration[400/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.14e-06
+2022-11-05 12:38:27,775 CLIP2ReID.train INFO: Epoch[33] Iteration[500/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.14e-06
+2022-11-05 12:39:03,906 CLIP2ReID.train INFO: Epoch 33 done. Time per batch: 0.460[s] Speed: 139.1[samples/s]
+2022-11-05 12:39:03,907 CLIP2ReID.train INFO: Validation Results - Epoch: 33
+2022-11-05 12:39:20,816 CLIP2ReID.eval INFO: 
++--------------------+------+-----------+-----------+---------+--------+
+|        task        |  R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 9.5  |   25.85   |    35.9   | 10.1119 | 4.5412 |
+|   t2i-sketch_RGB   | 27.8 |    48.8   |    58.2   | 17.8152 | 4.8603 |
+| t2i-textsketch_RGB | 31.3 | 54.000004 | 61.799995 | 20.3622 | 6.1534 |
++--------------------+------+-----------+-----------+---------+--------+
+2022-11-05 12:40:07,653 CLIP2ReID.train INFO: Epoch[34] Iteration[100/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.86e-06
+2022-11-05 12:40:53,380 CLIP2ReID.train INFO: Epoch[34] Iteration[200/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.86e-06
+2022-11-05 12:41:39,113 CLIP2ReID.train INFO: Epoch[34] Iteration[300/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.86e-06
+2022-11-05 12:42:24,938 CLIP2ReID.train INFO: Epoch[34] Iteration[400/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.86e-06
+2022-11-05 12:43:10,632 CLIP2ReID.train INFO: Epoch[34] Iteration[500/579] Loss: 0.0071, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.86e-06
+2022-11-05 12:43:46,522 CLIP2ReID.train INFO: Epoch 34 done. Time per batch: 0.459[s] Speed: 139.5[samples/s]
+2022-11-05 12:43:46,523 CLIP2ReID.train INFO: Validation Results - Epoch: 34
+2022-11-05 12:44:03,087 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |    9.4    |    26.0   |  35.2 |  9.9057 | 4.4091 |
+|   t2i-sketch_RGB   |    27.3   |    49.5   |  57.9 | 17.6029 | 4.7303 |
+| t2i-textsketch_RGB | 30.899998 | 53.649998 | 62.25 | 20.1056 | 6.0627 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 12:44:49,627 CLIP2ReID.train INFO: Epoch[35] Iteration[100/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.57e-06
+2022-11-05 12:45:35,169 CLIP2ReID.train INFO: Epoch[35] Iteration[200/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.57e-06
+2022-11-05 12:46:20,887 CLIP2ReID.train INFO: Epoch[35] Iteration[300/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.57e-06
+2022-11-05 12:47:06,575 CLIP2ReID.train INFO: Epoch[35] Iteration[400/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.57e-06
+2022-11-05 12:47:52,296 CLIP2ReID.train INFO: Epoch[35] Iteration[500/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.57e-06
+2022-11-05 12:48:28,168 CLIP2ReID.train INFO: Epoch 35 done. Time per batch: 0.458[s] Speed: 139.9[samples/s]
+2022-11-05 12:48:28,168 CLIP2ReID.train INFO: Validation Results - Epoch: 35
+2022-11-05 12:48:45,219 CLIP2ReID.eval INFO: 
++--------------------+------+-----------+------+---------+--------+
+|        task        |  R1  |     R5    | R10  |   mAP   |  mINP  |
++--------------------+------+-----------+------+---------+--------+
+|    t2i-text_RGB    | 9.75 | 26.300001 | 35.5 | 10.2766 | 4.6917 |
+|   t2i-sketch_RGB   | 26.9 | 49.399998 | 57.7 | 17.5423 | 4.7376 |
+| t2i-textsketch_RGB | 30.8 | 53.850002 | 62.0 | 20.1421 | 6.1063 |
++--------------------+------+-----------+------+---------+--------+
+2022-11-05 12:49:32,275 CLIP2ReID.train INFO: Epoch[36] Iteration[100/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.29e-06
+2022-11-05 12:50:17,892 CLIP2ReID.train INFO: Epoch[36] Iteration[200/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.29e-06
+2022-11-05 12:51:03,612 CLIP2ReID.train INFO: Epoch[36] Iteration[300/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.29e-06
+2022-11-05 12:51:49,250 CLIP2ReID.train INFO: Epoch[36] Iteration[400/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.29e-06
+2022-11-05 12:52:34,913 CLIP2ReID.train INFO: Epoch[36] Iteration[500/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.29e-06
+2022-11-05 12:53:10,768 CLIP2ReID.train INFO: Epoch 36 done. Time per batch: 0.458[s] Speed: 139.6[samples/s]
+2022-11-05 12:53:10,769 CLIP2ReID.train INFO: Validation Results - Epoch: 36
+2022-11-05 12:53:27,071 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+------+---------+--------+
+|        task        |   R1  |     R5    | R10  |   mAP   |  mINP  |
++--------------------+-------+-----------+------+---------+--------+
+|    t2i-text_RGB    | 10.15 | 27.849998 | 35.8 | 10.3918 | 4.6579 |
+|   t2i-sketch_RGB   |  28.0 | 48.699997 | 57.4 | 17.3519 | 4.5934 |
+| t2i-textsketch_RGB | 31.05 |    52.8   | 61.6 | 19.8555 | 5.9448 |
++--------------------+-------+-----------+------+---------+--------+
+2022-11-05 12:54:13,462 CLIP2ReID.train INFO: Epoch[37] Iteration[100/579] Loss: 0.0090, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.01e-06
+2022-11-05 12:54:58,794 CLIP2ReID.train INFO: Epoch[37] Iteration[200/579] Loss: 0.0080, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.01e-06
+2022-11-05 12:55:44,121 CLIP2ReID.train INFO: Epoch[37] Iteration[300/579] Loss: 0.0078, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.01e-06
+2022-11-05 12:56:29,503 CLIP2ReID.train INFO: Epoch[37] Iteration[400/579] Loss: 0.0077, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.01e-06
+2022-11-05 12:57:14,883 CLIP2ReID.train INFO: Epoch[37] Iteration[500/579] Loss: 0.0074, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 4.01e-06
+2022-11-05 12:57:50,480 CLIP2ReID.train INFO: Epoch 37 done. Time per batch: 0.455[s] Speed: 140.8[samples/s]
+2022-11-05 12:57:50,481 CLIP2ReID.train INFO: Validation Results - Epoch: 37
+2022-11-05 12:58:06,529 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    8.95   |    26.0   |   35.15   | 10.0014 | 4.5303 |
+|   t2i-sketch_RGB   | 26.499998 |    48.6   |    57.9   | 17.3084 | 4.6974 |
+| t2i-textsketch_RGB |    30.4   | 53.600002 | 62.199997 | 19.9675 | 6.0273 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 12:58:52,925 CLIP2ReID.train INFO: Epoch[38] Iteration[100/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.73e-06
+2022-11-05 12:59:38,109 CLIP2ReID.train INFO: Epoch[38] Iteration[200/579] Loss: 0.0073, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.73e-06
+2022-11-05 13:00:23,345 CLIP2ReID.train INFO: Epoch[38] Iteration[300/579] Loss: 0.0071, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.73e-06
+2022-11-05 13:01:08,577 CLIP2ReID.train INFO: Epoch[38] Iteration[400/579] Loss: 0.0071, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.73e-06
+2022-11-05 13:01:53,893 CLIP2ReID.train INFO: Epoch[38] Iteration[500/579] Loss: 0.0072, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.73e-06
+2022-11-05 13:02:29,445 CLIP2ReID.train INFO: Epoch 38 done. Time per batch: 0.454[s] Speed: 141.0[samples/s]
+2022-11-05 13:02:29,445 CLIP2ReID.train INFO: Validation Results - Epoch: 38
+2022-11-05 13:02:45,640 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |    9.3    |   25.85   | 35.25 |  9.9444 | 4.4749 |
+|   t2i-sketch_RGB   | 26.800001 |    47.9   |  57.4 | 17.2826 | 4.7038 |
+| t2i-textsketch_RGB |   30.25   | 52.149998 | 61.35 | 19.8362 | 5.9883 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 13:03:32,020 CLIP2ReID.train INFO: Epoch[39] Iteration[100/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.45e-06
+2022-11-05 13:04:17,274 CLIP2ReID.train INFO: Epoch[39] Iteration[200/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.45e-06
+2022-11-05 13:05:02,656 CLIP2ReID.train INFO: Epoch[39] Iteration[300/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.45e-06
+2022-11-05 13:05:48,054 CLIP2ReID.train INFO: Epoch[39] Iteration[400/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.45e-06
+2022-11-05 13:06:33,524 CLIP2ReID.train INFO: Epoch[39] Iteration[500/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.45e-06
+2022-11-05 13:07:09,175 CLIP2ReID.train INFO: Epoch 39 done. Time per batch: 0.455[s] Speed: 140.7[samples/s]
+2022-11-05 13:07:09,176 CLIP2ReID.train INFO: Validation Results - Epoch: 39
+2022-11-05 13:07:25,304 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |    9.5    |   25.45   | 34.65 |  9.9344 | 4.4866 |
+|   t2i-sketch_RGB   | 27.000002 |    49.3   |  57.5 | 17.3255 | 4.6134 |
+| t2i-textsketch_RGB | 31.099998 | 52.399998 | 61.85 | 19.9754 | 5.9981 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 13:08:11,813 CLIP2ReID.train INFO: Epoch[40] Iteration[100/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.19e-06
+2022-11-05 13:08:57,107 CLIP2ReID.train INFO: Epoch[40] Iteration[200/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.19e-06
+2022-11-05 13:09:42,471 CLIP2ReID.train INFO: Epoch[40] Iteration[300/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.19e-06
+2022-11-05 13:10:27,829 CLIP2ReID.train INFO: Epoch[40] Iteration[400/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.19e-06
+2022-11-05 13:11:13,390 CLIP2ReID.train INFO: Epoch[40] Iteration[500/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.19e-06
+2022-11-05 13:11:49,272 CLIP2ReID.train INFO: Epoch 40 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 13:11:49,272 CLIP2ReID.train INFO: Validation Results - Epoch: 40
+2022-11-05 13:12:05,665 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |  9.650001 |   25.75   | 34.95 |  9.9492 | 4.4480 |
+|   t2i-sketch_RGB   | 27.000002 |    48.6   |  58.2 | 17.4174 | 4.7611 |
+| t2i-textsketch_RGB | 30.899998 | 52.850002 |  61.9 | 20.0497 | 6.0371 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 13:12:52,414 CLIP2ReID.train INFO: Epoch[41] Iteration[100/579] Loss: 0.0056, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.92e-06
+2022-11-05 13:13:37,984 CLIP2ReID.train INFO: Epoch[41] Iteration[200/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.92e-06
+2022-11-05 13:14:23,573 CLIP2ReID.train INFO: Epoch[41] Iteration[300/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.92e-06
+2022-11-05 13:15:09,175 CLIP2ReID.train INFO: Epoch[41] Iteration[400/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.92e-06
+2022-11-05 13:15:54,950 CLIP2ReID.train INFO: Epoch[41] Iteration[500/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.92e-06
+2022-11-05 13:16:30,794 CLIP2ReID.train INFO: Epoch 41 done. Time per batch: 0.458[s] Speed: 139.8[samples/s]
+2022-11-05 13:16:30,794 CLIP2ReID.train INFO: Validation Results - Epoch: 41
+2022-11-05 13:16:47,093 CLIP2ReID.eval INFO: 
++--------------------+------+-----------+------+---------+--------+
+|        task        |  R1  |     R5    | R10  |   mAP   |  mINP  |
++--------------------+------+-----------+------+---------+--------+
+|    t2i-text_RGB    | 9.2  | 25.150002 | 34.9 |  9.8042 | 4.3844 |
+|   t2i-sketch_RGB   | 27.2 |    48.6   | 57.8 | 17.1546 | 4.5999 |
+| t2i-textsketch_RGB | 30.4 | 52.600002 | 61.0 | 19.6744 | 5.9040 |
++--------------------+------+-----------+------+---------+--------+
+2022-11-05 13:17:33,449 CLIP2ReID.train INFO: Epoch[42] Iteration[100/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.67e-06
+2022-11-05 13:18:18,748 CLIP2ReID.train INFO: Epoch[42] Iteration[200/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.67e-06
+2022-11-05 13:19:04,185 CLIP2ReID.train INFO: Epoch[42] Iteration[300/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.67e-06
+2022-11-05 13:19:49,717 CLIP2ReID.train INFO: Epoch[42] Iteration[400/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.67e-06
+2022-11-05 13:20:35,309 CLIP2ReID.train INFO: Epoch[42] Iteration[500/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.67e-06
+2022-11-05 13:21:11,043 CLIP2ReID.train INFO: Epoch 42 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 13:21:11,046 CLIP2ReID.train INFO: Validation Results - Epoch: 42
+2022-11-05 13:21:27,457 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.5  |   25.75   | 35.350002 |  9.9730 | 4.5130 |
+|   t2i-sketch_RGB   |  27.3 |    48.4   |    57.5   | 17.5700 | 4.8028 |
+| t2i-textsketch_RGB | 30.65 | 52.850002 |    62.0   | 20.0801 | 6.1304 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 13:22:14,254 CLIP2ReID.train INFO: Epoch[43] Iteration[100/579] Loss: 0.0053, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.42e-06
+2022-11-05 13:22:59,708 CLIP2ReID.train INFO: Epoch[43] Iteration[200/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.42e-06
+2022-11-05 13:23:45,233 CLIP2ReID.train INFO: Epoch[43] Iteration[300/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.42e-06
+2022-11-05 13:24:30,693 CLIP2ReID.train INFO: Epoch[43] Iteration[400/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.42e-06
+2022-11-05 13:25:16,104 CLIP2ReID.train INFO: Epoch[43] Iteration[500/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.42e-06
+2022-11-05 13:25:51,660 CLIP2ReID.train INFO: Epoch 43 done. Time per batch: 0.456[s] Speed: 140.3[samples/s]
+2022-11-05 13:25:51,661 CLIP2ReID.train INFO: Validation Results - Epoch: 43
+2022-11-05 13:26:07,711 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.55   |   25.75   | 35.350002 | 10.0045 | 4.5737 |
+|   t2i-sketch_RGB   | 27.000002 | 48.100002 | 57.200005 | 17.1298 | 4.6155 |
+| t2i-textsketch_RGB | 30.599998 |   51.75   |   61.05   | 19.7567 | 5.9571 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 13:26:54,288 CLIP2ReID.train INFO: Epoch[44] Iteration[100/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.18e-06
+2022-11-05 13:27:39,632 CLIP2ReID.train INFO: Epoch[44] Iteration[200/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.18e-06
+2022-11-05 13:28:25,199 CLIP2ReID.train INFO: Epoch[44] Iteration[300/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.18e-06
+2022-11-05 13:29:10,778 CLIP2ReID.train INFO: Epoch[44] Iteration[400/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.18e-06
+2022-11-05 13:29:56,332 CLIP2ReID.train INFO: Epoch[44] Iteration[500/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.18e-06
+2022-11-05 13:30:32,000 CLIP2ReID.train INFO: Epoch 44 done. Time per batch: 0.456[s] Speed: 140.3[samples/s]
+2022-11-05 13:30:32,001 CLIP2ReID.train INFO: Validation Results - Epoch: 44
+2022-11-05 13:30:48,388 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-----------+---------+--------+
+|        task        |   R1  |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 10.15 | 26.050001 |    35.5   | 10.1785 | 4.5883 |
+|   t2i-sketch_RGB   |  27.4 | 48.699997 |    57.5   | 17.4312 | 4.6677 |
+| t2i-textsketch_RGB |  31.0 | 52.649998 | 61.549995 | 20.0036 | 6.0277 |
++--------------------+-------+-----------+-----------+---------+--------+
+2022-11-05 13:31:34,884 CLIP2ReID.train INFO: Epoch[45] Iteration[100/579] Loss: 0.0072, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.95e-06
+2022-11-05 13:32:20,134 CLIP2ReID.train INFO: Epoch[45] Iteration[200/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.95e-06
+2022-11-05 13:33:05,529 CLIP2ReID.train INFO: Epoch[45] Iteration[300/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.95e-06
+2022-11-05 13:33:50,926 CLIP2ReID.train INFO: Epoch[45] Iteration[400/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.95e-06
+2022-11-05 13:34:36,416 CLIP2ReID.train INFO: Epoch[45] Iteration[500/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.95e-06
+2022-11-05 13:35:12,146 CLIP2ReID.train INFO: Epoch 45 done. Time per batch: 0.455[s] Speed: 140.6[samples/s]
+2022-11-05 13:35:12,146 CLIP2ReID.train INFO: Validation Results - Epoch: 45
+2022-11-05 13:35:28,280 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+------+---------+--------+
+|        task        |     R1    |     R5    | R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+------+---------+--------+
+|    t2i-text_RGB    |    10.2   | 25.650002 | 35.4 | 10.1583 | 4.5227 |
+|   t2i-sketch_RGB   | 26.699999 |    48.8   | 57.7 | 17.4087 | 4.7578 |
+| t2i-textsketch_RGB |   30.65   | 52.850002 | 61.9 | 19.9559 | 6.0483 |
++--------------------+-----------+-----------+------+---------+--------+
+2022-11-05 13:36:14,927 CLIP2ReID.train INFO: Epoch[46] Iteration[100/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.73e-06
+2022-11-05 13:37:00,383 CLIP2ReID.train INFO: Epoch[46] Iteration[200/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.73e-06
+2022-11-05 13:37:45,873 CLIP2ReID.train INFO: Epoch[46] Iteration[300/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.73e-06
+2022-11-05 13:38:31,316 CLIP2ReID.train INFO: Epoch[46] Iteration[400/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.73e-06
+2022-11-05 13:39:16,763 CLIP2ReID.train INFO: Epoch[46] Iteration[500/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.73e-06
+2022-11-05 13:39:52,458 CLIP2ReID.train INFO: Epoch 46 done. Time per batch: 0.456[s] Speed: 140.4[samples/s]
+2022-11-05 13:39:52,458 CLIP2ReID.train INFO: Validation Results - Epoch: 46
+2022-11-05 13:40:08,614 CLIP2ReID.eval INFO: 
++--------------------+-----------+------+-----------+---------+--------+
+|        task        |     R1    |  R5  |    R10    |   mAP   |  mINP  |
++--------------------+-----------+------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.9    | 25.9 |   35.45   | 10.1313 | 4.5492 |
+|   t2i-sketch_RGB   | 26.199999 | 48.6 | 57.300003 | 17.2619 | 4.6778 |
+| t2i-textsketch_RGB | 30.199999 | 52.8 |   61.65   | 19.8370 | 5.9684 |
++--------------------+-----------+------+-----------+---------+--------+
+2022-11-05 13:40:54,962 CLIP2ReID.train INFO: Epoch[47] Iteration[100/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.52e-06
+2022-11-05 13:41:40,215 CLIP2ReID.train INFO: Epoch[47] Iteration[200/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.52e-06
+2022-11-05 13:42:25,527 CLIP2ReID.train INFO: Epoch[47] Iteration[300/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.52e-06
+2022-11-05 13:43:10,826 CLIP2ReID.train INFO: Epoch[47] Iteration[400/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.52e-06
+2022-11-05 13:43:56,153 CLIP2ReID.train INFO: Epoch[47] Iteration[500/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.52e-06
+2022-11-05 13:44:31,771 CLIP2ReID.train INFO: Epoch 47 done. Time per batch: 0.454[s] Speed: 140.9[samples/s]
+2022-11-05 13:44:31,771 CLIP2ReID.train INFO: Validation Results - Epoch: 47
+2022-11-05 13:44:48,027 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |   10.35   | 26.550001 |   35.65   | 10.2454 | 4.5482 |
+|   t2i-sketch_RGB   |    26.9   | 48.100002 | 57.300003 | 17.3380 | 4.7066 |
+| t2i-textsketch_RGB | 30.849998 | 52.399998 |    61.3   | 19.8814 | 5.9871 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 13:45:34,597 CLIP2ReID.train INFO: Epoch[48] Iteration[100/579] Loss: 0.0052, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.32e-06
+2022-11-05 13:46:19,966 CLIP2ReID.train INFO: Epoch[48] Iteration[200/579] Loss: 0.0054, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.32e-06
+2022-11-05 13:47:05,425 CLIP2ReID.train INFO: Epoch[48] Iteration[300/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.32e-06
+2022-11-05 13:47:51,069 CLIP2ReID.train INFO: Epoch[48] Iteration[400/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.32e-06
+2022-11-05 13:48:36,666 CLIP2ReID.train INFO: Epoch[48] Iteration[500/579] Loss: 0.0056, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.32e-06
+2022-11-05 13:49:12,430 CLIP2ReID.train INFO: Epoch 48 done. Time per batch: 0.456[s] Speed: 140.2[samples/s]
+2022-11-05 13:49:12,430 CLIP2ReID.train INFO: Validation Results - Epoch: 48
+2022-11-05 13:49:28,563 CLIP2ReID.eval INFO: 
++--------------------+----------+-----------+-----------+---------+--------+
+|        task        |    R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    | 9.849999 |    26.1   |    35.5   | 10.0683 | 4.4802 |
+|   t2i-sketch_RGB   |   27.1   |    49.0   | 57.200005 | 17.3652 | 4.7102 |
+| t2i-textsketch_RGB |   30.8   | 52.999996 |   61.65   | 19.9338 | 6.0032 |
++--------------------+----------+-----------+-----------+---------+--------+
+2022-11-05 13:50:15,300 CLIP2ReID.train INFO: Epoch[49] Iteration[100/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.13e-06
+2022-11-05 13:51:00,791 CLIP2ReID.train INFO: Epoch[49] Iteration[200/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.13e-06
+2022-11-05 13:51:46,419 CLIP2ReID.train INFO: Epoch[49] Iteration[300/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.13e-06
+2022-11-05 13:52:32,199 CLIP2ReID.train INFO: Epoch[49] Iteration[400/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.13e-06
+2022-11-05 13:53:17,880 CLIP2ReID.train INFO: Epoch[49] Iteration[500/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.13e-06
+2022-11-05 13:53:53,687 CLIP2ReID.train INFO: Epoch 49 done. Time per batch: 0.458[s] Speed: 139.8[samples/s]
+2022-11-05 13:53:53,687 CLIP2ReID.train INFO: Validation Results - Epoch: 49
+2022-11-05 13:54:09,955 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    10.1   | 26.300001 |   35.45   | 10.0874 | 4.4937 |
+|   t2i-sketch_RGB   |    26.6   | 48.899998 | 57.300003 | 17.2013 | 4.6621 |
+| t2i-textsketch_RGB | 30.849998 |   52.45   |   61.85   | 19.8681 | 6.0020 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 13:54:56,844 CLIP2ReID.train INFO: Epoch[50] Iteration[100/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.55e-07
+2022-11-05 13:55:42,403 CLIP2ReID.train INFO: Epoch[50] Iteration[200/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.55e-07
+2022-11-05 13:56:28,168 CLIP2ReID.train INFO: Epoch[50] Iteration[300/579] Loss: 0.0070, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.55e-07
+2022-11-05 13:57:13,845 CLIP2ReID.train INFO: Epoch[50] Iteration[400/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.55e-07
+2022-11-05 13:57:59,473 CLIP2ReID.train INFO: Epoch[50] Iteration[500/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 9.55e-07
+2022-11-05 13:58:35,283 CLIP2ReID.train INFO: Epoch 50 done. Time per batch: 0.458[s] Speed: 139.7[samples/s]
+2022-11-05 13:58:35,284 CLIP2ReID.train INFO: Validation Results - Epoch: 50
+2022-11-05 13:58:51,512 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.95   | 26.300001 |   35.65   | 10.1427 | 4.5430 |
+|   t2i-sketch_RGB   | 26.499998 | 48.699997 | 57.200005 | 17.2374 | 4.6745 |
+| t2i-textsketch_RGB | 30.849998 |    52.7   |    61.4   | 19.8411 | 6.0035 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 13:59:38,163 CLIP2ReID.train INFO: Epoch[51] Iteration[100/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.94e-07
+2022-11-05 14:00:23,553 CLIP2ReID.train INFO: Epoch[51] Iteration[200/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.94e-07
+2022-11-05 14:01:08,988 CLIP2ReID.train INFO: Epoch[51] Iteration[300/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.94e-07
+2022-11-05 14:01:54,378 CLIP2ReID.train INFO: Epoch[51] Iteration[400/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.94e-07
+2022-11-05 14:02:39,808 CLIP2ReID.train INFO: Epoch[51] Iteration[500/579] Loss: 0.0061, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.94e-07
+2022-11-05 14:03:15,442 CLIP2ReID.train INFO: Epoch 51 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 14:03:15,443 CLIP2ReID.train INFO: Validation Results - Epoch: 51
+2022-11-05 14:03:31,553 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |    10.0   |   26.15   | 35.75 | 10.1650 | 4.5281 |
+|   t2i-sketch_RGB   | 26.800001 |    48.5   |  57.5 | 17.2875 | 4.6970 |
+| t2i-textsketch_RGB |   30.65   | 53.250004 |  61.6 | 19.8814 | 5.9992 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 14:04:18,342 CLIP2ReID.train INFO: Epoch[52] Iteration[100/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.46e-07
+2022-11-05 14:05:03,601 CLIP2ReID.train INFO: Epoch[52] Iteration[200/579] Loss: 0.0064, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.46e-07
+2022-11-05 14:05:49,043 CLIP2ReID.train INFO: Epoch[52] Iteration[300/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.46e-07
+2022-11-05 14:06:34,525 CLIP2ReID.train INFO: Epoch[52] Iteration[400/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.46e-07
+2022-11-05 14:07:19,965 CLIP2ReID.train INFO: Epoch[52] Iteration[500/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 6.46e-07
+2022-11-05 14:07:55,593 CLIP2ReID.train INFO: Epoch 52 done. Time per batch: 0.456[s] Speed: 140.4[samples/s]
+2022-11-05 14:07:55,594 CLIP2ReID.train INFO: Validation Results - Epoch: 52
+2022-11-05 14:08:11,737 CLIP2ReID.eval INFO: 
++--------------------+------+-----------+-------+---------+--------+
+|        task        |  R1  |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+------+-----------+-------+---------+--------+
+|    t2i-text_RGB    | 9.95 |   26.35   | 35.75 | 10.1521 | 4.5422 |
+|   t2i-sketch_RGB   | 27.1 | 48.699997 |  57.7 | 17.3155 | 4.6652 |
+| t2i-textsketch_RGB | 30.7 | 53.350002 |  61.6 | 19.9096 | 6.0031 |
++--------------------+------+-----------+-------+---------+--------+
+2022-11-05 14:08:58,313 CLIP2ReID.train INFO: Epoch[53] Iteration[100/579] Loss: 0.0049, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.13e-07
+2022-11-05 14:09:43,715 CLIP2ReID.train INFO: Epoch[53] Iteration[200/579] Loss: 0.0056, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.13e-07
+2022-11-05 14:10:29,157 CLIP2ReID.train INFO: Epoch[53] Iteration[300/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.13e-07
+2022-11-05 14:11:14,575 CLIP2ReID.train INFO: Epoch[53] Iteration[400/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.13e-07
+2022-11-05 14:12:00,031 CLIP2ReID.train INFO: Epoch[53] Iteration[500/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 5.13e-07
+2022-11-05 14:12:35,704 CLIP2ReID.train INFO: Epoch 53 done. Time per batch: 0.456[s] Speed: 140.5[samples/s]
+2022-11-05 14:12:35,705 CLIP2ReID.train INFO: Validation Results - Epoch: 53
+2022-11-05 14:12:51,747 CLIP2ReID.eval INFO: 
++--------------------+-------+-----------+-------+---------+--------+
+|        task        |   R1  |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |  9.9  | 25.949999 | 35.65 | 10.1326 | 4.5061 |
+|   t2i-sketch_RGB   |  27.1 | 48.899998 |  57.6 | 17.3202 | 4.6773 |
+| t2i-textsketch_RGB | 30.45 | 53.149998 |  61.4 | 19.8146 | 5.9861 |
++--------------------+-------+-----------+-------+---------+--------+
+2022-11-05 14:13:38,445 CLIP2ReID.train INFO: Epoch[54] Iteration[100/579] Loss: 0.0069, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.94e-07
+2022-11-05 14:14:23,912 CLIP2ReID.train INFO: Epoch[54] Iteration[200/579] Loss: 0.0072, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.94e-07
+2022-11-05 14:15:09,554 CLIP2ReID.train INFO: Epoch[54] Iteration[300/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.94e-07
+2022-11-05 14:15:55,162 CLIP2ReID.train INFO: Epoch[54] Iteration[400/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.94e-07
+2022-11-05 14:16:40,854 CLIP2ReID.train INFO: Epoch[54] Iteration[500/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.94e-07
+2022-11-05 14:17:16,617 CLIP2ReID.train INFO: Epoch 54 done. Time per batch: 0.457[s] Speed: 140.0[samples/s]
+2022-11-05 14:17:16,617 CLIP2ReID.train INFO: Validation Results - Epoch: 54
+2022-11-05 14:17:32,833 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.9    |   26.15   |   35.65   | 10.1312 | 4.5152 |
+|   t2i-sketch_RGB   | 26.800001 | 48.699997 |    57.6   | 17.2954 | 4.6815 |
+| t2i-textsketch_RGB |    30.5   | 53.149998 | 61.699997 | 19.8574 | 6.0258 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 14:18:19,540 CLIP2ReID.train INFO: Epoch[55] Iteration[100/579] Loss: 0.0053, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.91e-07
+2022-11-05 14:19:05,673 CLIP2ReID.train INFO: Epoch[55] Iteration[200/579] Loss: 0.0055, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.91e-07
+2022-11-05 14:19:51,714 CLIP2ReID.train INFO: Epoch[55] Iteration[300/579] Loss: 0.0056, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.91e-07
+2022-11-05 14:20:37,671 CLIP2ReID.train INFO: Epoch[55] Iteration[400/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.91e-07
+2022-11-05 14:21:23,317 CLIP2ReID.train INFO: Epoch[55] Iteration[500/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.91e-07
+2022-11-05 14:21:59,207 CLIP2ReID.train INFO: Epoch 55 done. Time per batch: 0.460[s] Speed: 139.2[samples/s]
+2022-11-05 14:21:59,208 CLIP2ReID.train INFO: Validation Results - Epoch: 55
+2022-11-05 14:22:16,183 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |    9.8    | 26.050001 | 35.65 | 10.1154 | 4.5267 |
+|   t2i-sketch_RGB   | 26.800001 |    48.6   |  57.4 | 17.3028 | 4.7029 |
+| t2i-textsketch_RGB |   30.65   | 53.350002 |  61.4 | 19.9023 | 6.0236 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 14:23:28,053 CLIP2ReID.train INFO: Epoch[56] Iteration[100/579] Loss: 0.0051, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.03e-07
+2022-11-05 14:24:14,127 CLIP2ReID.train INFO: Epoch[56] Iteration[200/579] Loss: 0.0054, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.03e-07
+2022-11-05 14:25:00,451 CLIP2ReID.train INFO: Epoch[56] Iteration[300/579] Loss: 0.0053, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.03e-07
+2022-11-05 14:25:46,664 CLIP2ReID.train INFO: Epoch[56] Iteration[400/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.03e-07
+2022-11-05 14:26:32,847 CLIP2ReID.train INFO: Epoch[56] Iteration[500/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 2.03e-07
+2022-11-05 14:27:09,338 CLIP2ReID.train INFO: Epoch 56 done. Time per batch: 0.506[s] Speed: 126.5[samples/s]
+2022-11-05 14:27:09,338 CLIP2ReID.train INFO: Validation Results - Epoch: 56
+2022-11-05 14:27:26,305 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |  9.849999 |    26.1   | 35.65 | 10.1283 | 4.5319 |
+|   t2i-sketch_RGB   |    26.9   | 48.699997 |  57.4 | 17.3311 | 4.7165 |
+| t2i-textsketch_RGB | 30.599998 |    53.3   | 61.65 | 19.9003 | 6.0338 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 14:28:13,709 CLIP2ReID.train INFO: Epoch[57] Iteration[100/579] Loss: 0.0063, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.30e-07
+2022-11-05 14:29:00,032 CLIP2ReID.train INFO: Epoch[57] Iteration[200/579] Loss: 0.0057, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.30e-07
+2022-11-05 14:29:46,475 CLIP2ReID.train INFO: Epoch[57] Iteration[300/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.30e-07
+2022-11-05 14:30:33,076 CLIP2ReID.train INFO: Epoch[57] Iteration[400/579] Loss: 0.0065, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.30e-07
+2022-11-05 14:31:19,635 CLIP2ReID.train INFO: Epoch[57] Iteration[500/579] Loss: 0.0066, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 1.30e-07
+2022-11-05 14:31:55,963 CLIP2ReID.train INFO: Epoch 57 done. Time per batch: 0.465[s] Speed: 137.5[samples/s]
+2022-11-05 14:31:55,964 CLIP2ReID.train INFO: Validation Results - Epoch: 57
+2022-11-05 14:32:12,987 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.849999 | 26.249998 |    35.7   | 10.1375 | 4.5442 |
+|   t2i-sketch_RGB   | 26.699999 |    48.6   | 57.200005 | 17.3248 | 4.7279 |
+| t2i-textsketch_RGB |   30.55   | 53.250004 | 61.699997 | 19.8896 | 6.0374 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 14:33:00,176 CLIP2ReID.train INFO: Epoch[58] Iteration[100/579] Loss: 0.0055, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.32e-08
+2022-11-05 14:33:46,364 CLIP2ReID.train INFO: Epoch[58] Iteration[200/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.32e-08
+2022-11-05 14:34:32,661 CLIP2ReID.train INFO: Epoch[58] Iteration[300/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.32e-08
+2022-11-05 14:35:18,832 CLIP2ReID.train INFO: Epoch[58] Iteration[400/579] Loss: 0.0059, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.32e-08
+2022-11-05 14:36:05,005 CLIP2ReID.train INFO: Epoch[58] Iteration[500/579] Loss: 0.0060, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 7.32e-08
+2022-11-05 14:36:41,231 CLIP2ReID.train INFO: Epoch 58 done. Time per batch: 0.463[s] Speed: 138.2[samples/s]
+2022-11-05 14:36:41,231 CLIP2ReID.train INFO: Validation Results - Epoch: 58
+2022-11-05 14:36:58,479 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |  9.849999 |   26.35   |   35.75   | 10.1315 | 4.5329 |
+|   t2i-sketch_RGB   | 26.800001 |    48.6   | 57.200005 | 17.3223 | 4.6894 |
+| t2i-textsketch_RGB |   30.55   | 53.250004 |   61.75   | 19.9043 | 6.0412 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 14:37:45,954 CLIP2ReID.train INFO: Epoch[59] Iteration[100/579] Loss: 0.0054, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.26e-08
+2022-11-05 14:38:31,969 CLIP2ReID.train INFO: Epoch[59] Iteration[200/579] Loss: 0.0054, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.26e-08
+2022-11-05 14:39:17,901 CLIP2ReID.train INFO: Epoch[59] Iteration[300/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.26e-08
+2022-11-05 14:40:07,891 CLIP2ReID.train INFO: Epoch[59] Iteration[400/579] Loss: 0.0058, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.26e-08
+2022-11-05 14:40:54,180 CLIP2ReID.train INFO: Epoch[59] Iteration[500/579] Loss: 0.0062, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 3.26e-08
+2022-11-05 14:41:30,579 CLIP2ReID.train INFO: Epoch 59 done. Time per batch: 0.470[s] Speed: 136.3[samples/s]
+2022-11-05 14:41:30,579 CLIP2ReID.train INFO: Validation Results - Epoch: 59
+2022-11-05 14:41:47,607 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-----------+---------+--------+
+|        task        |     R1    |     R5    |    R10    |   mAP   |  mINP  |
++--------------------+-----------+-----------+-----------+---------+--------+
+|    t2i-text_RGB    |    9.8    | 26.249998 | 35.600002 | 10.1236 | 4.5261 |
+|   t2i-sketch_RGB   | 26.800001 | 48.699997 |    57.1   | 17.3310 | 4.7040 |
+| t2i-textsketch_RGB |   30.55   |    53.3   | 61.699997 | 19.8985 | 6.0372 |
++--------------------+-----------+-----------+-----------+---------+--------+
+2022-11-05 14:42:34,763 CLIP2ReID.train INFO: Epoch[60] Iteration[100/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.15e-09
+2022-11-05 14:43:20,928 CLIP2ReID.train INFO: Epoch[60] Iteration[200/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.15e-09
+2022-11-05 14:44:06,986 CLIP2ReID.train INFO: Epoch[60] Iteration[300/579] Loss: 0.0068, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.15e-09
+2022-11-05 14:44:53,116 CLIP2ReID.train INFO: Epoch[60] Iteration[400/579] Loss: 0.0071, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.15e-09
+2022-11-05 14:45:39,224 CLIP2ReID.train INFO: Epoch[60] Iteration[500/579] Loss: 0.0067, mcm_loss: 0.0000, mcq_loss: 0.0000, mlm_loss: 0.0000, Acc: 0.000, Base Lr: 8.15e-09
+2022-11-05 14:46:15,395 CLIP2ReID.train INFO: Epoch 60 done. Time per batch: 0.462[s] Speed: 138.5[samples/s]
+2022-11-05 14:46:15,395 CLIP2ReID.train INFO: Validation Results - Epoch: 60
+2022-11-05 14:46:32,219 CLIP2ReID.eval INFO: 
++--------------------+-----------+-----------+-------+---------+--------+
+|        task        |     R1    |     R5    |  R10  |   mAP   |  mINP  |
++--------------------+-----------+-----------+-------+---------+--------+
+|    t2i-text_RGB    |  9.650001 | 26.249998 | 35.65 | 10.1120 | 4.5402 |
+|   t2i-sketch_RGB   | 26.800001 | 48.699997 |  57.1 | 17.3342 | 4.7086 |
+| t2i-textsketch_RGB | 30.599998 |    53.3   |  61.6 | 19.9014 | 6.0369 |
++--------------------+-----------+-----------+-------+---------+--------+
+2022-11-05 14:46:32,372 CLIP2ReID.train INFO: text best R1: 25.099998474121094 at epoch 1
+2022-11-05 14:46:32,373 CLIP2ReID.train INFO: sketch best R1: 32.20000076293945 at epoch 10
+2022-11-05 14:46:32,373 CLIP2ReID.train INFO: fusion best R1: 38.0 at epoch 2
+2022-11-05 14:46:32,373 CLIP2ReID.train INFO: average best R1: 29.23333231608073 at epoch 2

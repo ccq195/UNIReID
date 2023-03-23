@@ -1,0 +1,117 @@
+/data1/ccq/multimodality/CUHK-PEDES/20221006_111901_sketch2_add-fusion_twofocal-1-35-fusion-itcloss_0001kld-id-label is not exists, create given directory
+2022-10-06 11:19:01,418 CLIP2ReID INFO: Using 1 GPUs
+2022-10-06 11:19:01,418 CLIP2ReID INFO: Namespace(MCM=False
+ MCQ=False
+ MCQMLM=False
+ MLM=False
+ MSM=False
+ MSMMLM=False
+ al=1.0
+ alpha=0.9
+ batch_size=64
+ beta=0.999
+ bias_lr_factor=2.0
+ cmm_loss_weight=1.0
+ cmt_depth=4
+ dataset_name='CUHK-PEDES'
+ distributed=False
+ eval_period=1
+ focal_three_fusion_loss=False
+ focal_three_fusion_loss2=False
+ focal_three_fusion_loss3=False
+ focal_three_fusion_loss4=True
+ focal_three_fusion_loss5=False
+ focal_three_fusion_loss6=False
+ focalthree_four_fusion_loss=False
+ focalthree_fusion_loss=False
+ four_fusion_loss=False
+ fusion_way='add'
+ ga=3.5
+ gamma=0.1
+ id_loss_weight=1.0
+ img_aug=True
+ img_size=(384
+ 128)
+ klp=0.001
+ label_mix=False
+ learnable_loss_weight=False
+ local_rank=0
+ log_period=100
+ loss_names='itc'
+ lr=1e-05
+ lr_factor=5.0
+ lrscheduler='cosine'
+ masked_token_rate=0.8
+ masked_token_unchanged_rate=0.1
+ mcm_loss_weight=1.0
+ mcq_loss_weight=1.0
+ milestones=(20
+ 50)
+ mlm_loss_weight=1.0
+ momentum=0.9
+ name='sketch2_add-fusion_twofocal-1-35-fusion-itcloss_0001kld-id-label'
+ nlp_aug=False
+ num_colors=60
+ num_epoch=60
+ num_instance=4
+ num_workers=8
+ only_fusion_loss=False
+ only_sketch=False
+ only_text=False
+ optimizer='Adam'
+ output_dir='/data1/ccq/multimodality/CUHK-PEDES/20221006_111901_sketch2_add-fusion_twofocal-1-35-fusion-itcloss_0001kld-id-label'
+ pa=0.1
+ power=0.9
+ pretrain_choice='ViT-B/16'
+ resume=False
+ resume_ckpt_file=''
+ root_dir='/data0/data_ccq/CUHK-PEDES/'
+ sampler='random'
+ stride_size=16
+ target_lr=0.0
+ temperature=0.07
+ test_batch_size=512
+ test_setting=0
+ text_length=77
+ training=True
+ use_imageid=False
+ val_dataset='test'
+ vocab_size=49408
+ warmup_epochs=5
+ warmup_factor=0.1
+ warmup_method='linear'
+ weight_decay=4e-05
+ weight_decay_bias=0.0)
+2022-10-06 11:19:01,418 CLIP2ReID INFO: Training only sketch False
+2022-10-06 11:19:01,418 CLIP2ReID INFO: Using only text False
+2022-10-06 11:19:01,419 CLIP2ReID INFO: Using add fusion method
+2022-10-06 11:19:02,110 CLIP2ReID.dataset INFO: => CUHK-PEDES Images and Captions are loaded
+2022-10-06 11:19:02,110 CLIP2ReID.dataset INFO: CUHKPEDES Dataset statistics:
+2022-10-06 11:19:02,112 CLIP2ReID.dataset INFO: 
++--------+-------+--------+----------+
+| subset |  ids  | images | captions |
++--------+-------+--------+----------+
+| train  | 11003 | 34054  |  68126   |
+|  test  |  1000 |  3074  |   6156   |
+|  val   |  1000 |  3078  |   6158   |
++--------+-------+--------+----------+
+2022-10-06 11:19:02,208 CLIP2ReID.dataset INFO: using random sampler
+Training Model with ['itc'] tasks
+2022-10-06 11:19:03,906 CLIP2ReID.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': (384, 128), 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Using 5.0 times learning rate for random init module 
+2022-10-06 11:19:07,293 CLIP2ReID.train INFO: start training
+/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/autograd/__init__.py:173: UserWarning: An output with one or more elements was resized since it had shape [64, 64], which does not match the required output shape [64]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1656352465323/work/aten/src/ATen/native/Resize.cpp:17.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Traceback (most recent call last):
+  File "train.py", line 82, in <module>
+    do_train(start_epoch, args, model, train_loader, evaluator, optimizer, scheduler, checkpointer)
+  File "/home/chencuiqun/text/CLIP2ReID_multimodality2/processor/processor.py", line 69, in do_train
+    total_loss.backward()
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Function KlDivBackward0 returned an invalid gradient at index 0 - got [64] but expected shape compatible with [64, 64]

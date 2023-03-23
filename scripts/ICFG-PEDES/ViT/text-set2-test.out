@@ -1,0 +1,28 @@
+2023-03-20 20:36:34,945 CLIP2ReID INFO: {'MCM': False, 'MCQ': False, 'MCQMLM': False, 'MLM': False, 'MSM': False, 'MSMMLM': False, 'al': 1.0, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmm_loss_weight': 1.0, 'cmt_depth': 4, 'dataset_name': 'RSTPReid', 'distributed': False, 'eval_period': 1, 'focal_three_fusion_loss': False, 'focal_three_fusion_loss2': False, 'focal_three_fusion_loss3': True, 'focal_three_fusion_loss4': False, 'focal_three_fusion_loss5': False, 'focal_three_fusion_loss6': False, 'focalthree_four_fusion_loss': False, 'focalthree_fusion_loss': False, 'four_fusion_loss': False, 'fusion_way': 'add', 'ga': 3.5, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'klp': 0.04, 'label_mix': False, 'learnable_loss_weight': False, 'local_rank': 0, 'log_period': 100, 'loss_names': 'itc', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'mcm_loss_weight': 1.0, 'mcq_loss_weight': 1.0, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'sketch2_add-fusion-twofocal-1-35-fusion-itcloss_004kl-text-label', 'nlp_aug': False, 'num_colors': 60, 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'only_fusion_loss': False, 'only_sketch': False, 'only_text': False, 'optimizer': 'Adam', 'output_dir': '/data1/ccq/multimodality-RSTPReid/RSTPReid/20221018_195253_sketch2_add-fusion-twofocal-1-35-fusion-itcloss_004kl-text-label', 'pa': 0.1, 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '/data0/data_ccq/RSTPReid/', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0.0, 'temperature': 0.07, 'test_batch_size': 512, 'test_setting': 0, 'text_length': 77, 'training': False, 'use_imageid': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2023-03-20 20:36:35,190 CLIP2ReID.dataset INFO: => RSTPReid Images and Captions are loaded
+2023-03-20 20:36:35,191 CLIP2ReID.dataset INFO: RSTPReid Dataset statistics:
+2023-03-20 20:36:35,191 CLIP2ReID.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 3701 | 18505  |  37010   |
+|  test  | 200  |  1000  |   2000   |
+|  val   | 200  |  1000  |   2000   |
++--------+------+--------+----------+
+Training Model with ['itc'] tasks
+2023-03-20 20:36:37,481 CLIP2ReID.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+Resized position embedding from size:torch.Size([1, 197, 768]) to size: torch.Size([1, 193, 768]) with height:24 width: 8
+Traceback (most recent call last):
+  File "test.py", line 37, in <module>
+    model.to(device)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/modules/module.py", line 927, in to
+    return self._apply(convert)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/modules/module.py", line 602, in _apply
+    param_applied = fn(param)
+  File "/home/chencuiqun/anaconda3/envs/py38base/lib/python3.8/site-packages/torch/nn/modules/module.py", line 925, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 98.00 MiB (GPU 0; 23.70 GiB total capacity; 244.33 MiB already allocated; 80.81 MiB free; 248.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
