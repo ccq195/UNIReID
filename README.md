@@ -6,7 +6,7 @@
 3. This paper contributes three multi-modal ReID datasets to support unified ReID evaluation.
 
 # Dataset
-Based on existing text-based datasets (CUHK-PEDES, ICFG-PEDES, and RSTPReid), we collect the sketches from photo modality to obtain multi-modality datasets (Tri-CUHK-PEDES, Tri-ICFG-PEDES, and Tri-RSTPReid).  The collected sketches can be found in: https://pan.baidu.com/s/1c0h2utqisEx6OzGuoSaQhA (提取码: ndau). 
+Based on existing text-based datasets (CUHK-PEDES, ICFG-PEDES, and RSTPReid), we collect the sketches from photo modality to obtain multi-modality datasets (Tri-CUHK-PEDES, Tri-ICFG-PEDES, and Tri-RSTPReid).  The collected sketches can be found in: https://pan.baidu.com/s/1c0h2utqisEx6OzGuoSaQhA (提取码: ndau) Google Drive(https://drive.google.com/file/d/12FIN-93Y4vXqVDVWLvLBwg3q0z0Vtwij/view?usp=sharing). 
 
 # Citation
 @inproceedings{chen2023towards,
